@@ -92,26 +92,7 @@ class identifier_values(BaseModel):
     identifier : str
 
 def delete_obj(identifier):
-    # find index of row values is e
-    csv_file = csv.reader(open('file.csv', "r"), delimiter=",")
-    list_obj = []
-    index_row = find_row(identifier)
-    # #loop through the csv list
-    # for row in csv_file:
-    #     #if current row identifier is equal to input, return thw index
-    #     if identifier == row[0]:
-    #         continue
-    #     else:
-    #         list_obj.append(row)
-
-    csv_file[index_row+1] = "\n"
-
-    with open('file.csv', 'w', encoding='UTF8', newline='') as f:
-        writer = csv.writer(f)
-
-        for row in list_obj:
-            # write the data
-            writer.writerow(row)
+    return 
 
 
 @app.delete("/delete")
